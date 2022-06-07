@@ -51,7 +51,7 @@ function Torusknot(props) {
 function Knot(){
   return(
     <Canvas id='bg'>
-      <Text3D font={lato} position={[-2.9, 2, 0]}>
+      <Text3D font={lato} size={0.6} position={[-1.73, 2, 0]}>
         adrien.vc
         <meshStandardMaterial color="white" />
         <Edges color="white" />
@@ -61,8 +61,8 @@ function Knot(){
       <pointLight position={[-10, -10, -10]} />
       <pointLight position={[10, 10, 10]} />
       <Torusknot />
-      <Button link='https://github.com/Crypto-Advisor' text='<GitHub>' position={[-3.75, -2.2, 0]}/>
-      <Button link='https://www.linkedin.com/in/adriennav/' text='<LinkedIn>' position={[0.25, -2.2, 0]}/>
+      <Button link='https://github.com/Crypto-Advisor' text='<GitHub>' position={[-1.55, -2.4, 0]}/>
+      <Button link='https://www.linkedin.com/in/adriennav/' text='<LinkedIn>' position={[-1.8, -3.2, 0]}/>
       <Stars />
       <OrbitControls  enableZoom={false} enablePan={false} />
   </Canvas>
