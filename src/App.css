@@ -11,10 +11,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: white;
+  background-color: black;
 }
 
 canvas{
-  height: 80vh;
+  height: 100vh;
 }
 
 .dtext-container{
