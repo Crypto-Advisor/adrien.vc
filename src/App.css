@@ -1,15 +1,24 @@
 .App {
   text-align: center;
-  height: 100vh;
-  width: 100vw;
-  background-color: rgb(28, 28, 28);
+}
+
+.paragraph{
+  width: 400px;
+}
+
+.item-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 canvas{
-  position: fixed;
-  top: 0;
-  left: 0;
+  height: 80vh;
 }
 
+.dtext-container{
+  background-color: black;
+}
 
 

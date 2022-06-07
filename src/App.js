@@ -1,41 +1,92 @@
-import React, { Suspense } from 'react'
+import React, { Suspense, useRef, useEffect, useState, useMemo } from 'react'
 
-import { Canvas, useLoader } from '@react-three/fiber'
-import { OrbitControls, Stars } from '@react-three/drei';
-import { TextureLoader } from 'three';
-import texture from "./images/map.jpeg"
+import { Canvas, useFrame, useThree, extend } from '@react-three/fiber'
+import { OrbitControls, useCursor, Stars } from '@react-three/drei'
+import { AsciiEffect } from 'three-stdlib'
+
 import './App.css';
-import { Sphere } from 'three';
 
-function Box() {
-  const colorMap = useLoader(TextureLoader, texture)
-
+function Torusknot(props) {
+  const ref = useRef()
+  const [clicked, click] = useState(false)
+  const [hovered, hover] = useState(false)
+  useCursor(hovered)
+  useFrame((state, delta) => (ref.current.rotation.x = ref.current.rotation.y += delta / 2))
   return (
-    <mesh position={[0,0,0]}>
-      <boxBufferGeometry attach="geometry" />
-      <meshNormalMaterial attach="material" />
+    <mesh
+      {...props}
+      ref={ref}
+      scale={clicked ? 1.5 : 1.25}
+      onClick={() => click(!clicked)}
+      onPointerOver={() => hover(true)}
+      onPointerOut={() => hover(false)}>
+      <torusKnotGeometry args={[1, 0.2, 128, 32]} />
+      <meshStandardMaterial color="orange" />
     </mesh>
   )
 }
 
-function AnimatedSphere() {
-  return (
-    <Sphere visible args={[1, 100, 200]} scale={2} ></Sphere>
+function AsciiRenderer({ renderIndex = 1, characters = ' .:-+*=%@#', ...options }) {
+  // Reactive state
+  const { size, gl, scene, camera } = useThree()
+
+  // Create effect
+  const effect = useMemo(() => {
+    const effect = new AsciiEffect(gl, characters, options)
+    effect.domElement.style.position = 'absolute'
+    effect.domElement.style.top = '0px'
+    effect.domElement.style.left = '0px'
+    effect.domElement.style.color = 'white'
+    effect.domElement.style.backgroundColor = 'black'
+    effect.domElement.style.pointerEvents = 'none'
+    return effect
+  }, [characters, options.invert])
+
+  // Append on mount, remove on unmount
+  useEffect(() => {
+    gl.domElement.parentNode.appendChild(effect.domElement)
+    return () => gl.domElement.parentNode.removeChild(effect.domElement)
+  }, [effect])
+
+  // Set size
+  useEffect(() => {
+    effect.setSize(size.width, size.height)
+  }, [effect, size])
+
+  // Take over render-loop (that is what the index is for)
+  useFrame((state) => {
+    effect.render(scene, camera)
+  }, renderIndex)
+
+  // This component returns nothing, it has no view, it is a purely logical
+}
+
+function Knot(){
+  return(
+    <Canvas id='bg'>
+      <color attach="background" args={['black']} />
+      <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
+      <pointLight position={[-10, -10, -10]} />
+      <Torusknot />
+      <OrbitControls  enableZoom={false} enablePan={false} />
+      <AsciiRenderer invert />
+  </Canvas>
   )
 }
 
+
 function App() {
+
   return (
     <div className="App">
-      <Canvas id='bg'>
-        <OrbitControls enableZoom={false}/>
-        <Stars />
-        <ambientLight intensity={0.5} />
-        <spotLight position={[10,15,10]} angle={0.3} />
-        <Suspense fallback={null}>
-          <Box />
-        </Suspense>
-      </Canvas>
+      <div className='item-container'>
+        <h1>adrien.vc</h1>
+        <p className='paragraph'>Founder of multiple financial service products in the quantitative finance space. Skilled in Online Content Creation, Solidity Development, Alternative Data Analysis, and Management.</p>
+      </div>
+      <Knot />
+      <div>
+        <h2>Java, C, React, Express, Mongo, PostgreSQL, NodeJs, Python, Rust, Solidity, Golang</h2>
+      </div>
     </div>
   );
 }
