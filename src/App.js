@@ -76,7 +76,7 @@ function App() {
     <div className="App">
       <Knot />
       <div className='item-container'>
-        <h1>contact@adrien.vc</h1>
+        <h1>adrien@venturenode.xyz</h1>
         <p className='paragraph'>Founder of multiple financial service products in the quantitative finance space. Skilled in Online Content Creation, Solidity Development, Alternative Data Analysis, and Management.</p>
       </div>
       <div className='item-container'>
