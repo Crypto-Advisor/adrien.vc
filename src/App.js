@@ -80,7 +80,7 @@ function App() {
         <p className='paragraph'>Founder of multiple financial service products in the quantitative finance space. Skilled in Online Content Creation, Solidity Development, Alternative Data Analysis, and Management.</p>
       </div>
       <div className='item-container'>
-        <h2>Java, C, React, Express, Mongo, PostgreSQL, NodeJs, Python, Rust, Solidity, Golang, PHP, Django</h2>
+        <h2>Java, C, C++, Typescript, React, Express, Mongo, PostgreSQL, NodeJs, Flutter, Dart, Python, Rust, Solidity, Golang, PHP, Django, Flask, BASH, Docker</h2>
       </div>
     </div>
   );
