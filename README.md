@@ -1,8 +1,39 @@
-# Getting Started with adrien.vc
+# adrien.vc
 
-This project was bootstrapped with [Create adrien App](https://github.com/facebook/create-react-app).
+A 3D interactive portfolio website built with React and Three.js, featuring a rotating torus knot and social links.
 
-## Available Scripts
+## 🚀 Deployment to GitHub Pages
+
+This project is configured for GitHub Pages deployment.
+
+### First-time Setup
+
+1. **Update the homepage URL** in `package.json`:
+   ```json
+   "homepage": "https://YOUR_GITHUB_USERNAME.github.io/YOUR_REPO_NAME"
+   ```
+
+2. **Install dependencies** (including gh-pages):
+   ```bash
+   npm install
+   ```
+
+3. **Deploy to GitHub Pages**:
+   ```bash
+   npm run deploy
+   ```
+
+This will build your app and deploy it to the `gh-pages` branch.
+
+4. **Enable GitHub Pages** in your repository:
+   - Go to Settings → Pages
+   - Set Source to "Deploy from a branch"
+   - Select the `gh-pages` branch
+   - Click Save
+
+Your site will be live at the URL specified in the `homepage` field!
+
+## 📦 Available Scripts
 
 In the project directory, you can run:
 
