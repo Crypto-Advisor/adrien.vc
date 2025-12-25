@@ -844,6 +844,22 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .terminal-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+  
+  .panel-threejs {
+    grid-column: 1 / -1;
+    min-height: 350px;
+  }
+  
+  .panel-profile {
+    grid-row: auto;
+  }
+}
+
 @media (max-width: 1024px) {
   .terminal-grid {
     grid-template-columns: 1fr;
@@ -856,45 +872,290 @@
   
   .panel-threejs {
     grid-row: auto;
+    grid-column: auto;
     min-height: 400px;
   }
   
   .skills-container {
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
+  
+  .live-data {
+    gap: 8px;
+    margin-right: 10px;
+  }
 }
 
 @media (max-width: 768px) {
+  .App {
+    padding: 0;
+  }
+  
+  .navarre-terminal {
+    min-width: 100vw;
+  }
+  
   .status-bar {
     font-size: 10px;
-    padding: 6px 15px;
+    padding: 10px 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .status-left,
+  .status-right {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .status-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+  }
+  
+  .live-data {
+    gap: 8px;
+    margin-right: 0;
+  }
+  
+  .data-point {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+  
+  .terminal-logo {
+    font-size: 13px;
+    letter-spacing: 1.5px;
+  }
+  
+  .ticker-bar {
+    padding: 8px 0;
+  }
+  
+  .ticker-item {
+    font-size: 10px;
+  }
+  
+  .terminal-grid {
+    gap: 2px;
+    padding: 2px;
+  }
+  
+  .panel {
+    border-width: 1px;
+  }
+  
+  .panel-header {
+    padding: 12px 15px;
+  }
+  
+  .panel-title {
+    font-size: 12px;
+    gap: 8px;
+  }
+  
+  .panel-code {
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+  
+  .panel-content {
+    padding: 18px 15px;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  
+  .panel-threejs {
+    min-height: 300px;
+  }
+  
+  .field-label {
+    width: 90px;
+    font-size: 11px;
+  }
+  
+  .field-value {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  
+  .section-header {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+  
+  .description-text {
+    font-size: 13px;
+    line-height: 1.8;
+    color: #ddd;
+  }
+  
+  .progress-container {
+    margin: 15px 0;
+  }
+  
+  .progress-label {
+    font-size: 11px;
+    margin-bottom: 8px;
+  }
+  
+  .progress-bar {
+    height: 22px;
+  }
+  
+  .progress-value {
+    font-size: 11px;
+  }
+  
+  .data-table {
+    font-size: 11px;
+  }
+  
+  .data-table thead th {
+    padding: 10px 8px;
+    font-size: 10px;
+  }
+  
+  .data-table tbody td {
+    padding: 12px 8px;
+    font-size: 11px;
+  }
+  
+  .mini-progress {
+    width: 55px;
+    height: 8px;
+  }
+  
+  .skills-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .skill-item {
+    padding: 10px 12px;
+  }
+  
+  .skill-name {
+    font-size: 12px;
+  }
+  
+  .command-bar {
+    padding: 10px 15px;
+    font-size: 11px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .command-hints {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .hint-button {
+    font-size: 10px;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .status-bar {
+    font-size: 9px;
+    padding: 8px 12px;
   }
   
   .terminal-logo {
     font-size: 12px;
   }
   
-  .panel-content {
-    padding: 15px;
+  .user-id,
+  .session-status {
+    display: none;
+  }
+  
+  .separator {
+    display: none;
+  }
+  
+  .panel-header {
+    padding: 10px 12px;
+  }
+  
+  .panel-title {
     font-size: 11px;
   }
   
+  .panel-content {
+    padding: 15px 12px;
+    font-size: 12px;
+    line-height: 1.8;
+  }
+  
+  .panel-threejs {
+    min-height: 250px;
+  }
+  
+  .field-row {
+    flex-direction: column;
+    gap: 6px;
+    padding: 12px 0;
+  }
+  
   .field-label {
-    width: 90px;
+    width: 100%;
     font-size: 10px;
   }
   
-  .data-table {
+  .field-value {
+    font-size: 12px;
+  }
+  
+  .description-text {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+  
+  .section-header {
+    font-size: 11px;
+  }
+  
+  .progress-label {
     font-size: 10px;
+  }
+  
+  .progress-bar {
+    height: 20px;
   }
   
   .skills-container {
     grid-template-columns: 1fr;
   }
   
-  .command-bar {
-    padding: 6px 15px;
+  .skill-name {
+    font-size: 11px;
+  }
+  
+  .data-table {
     font-size: 10px;
+  }
+  
+  .data-table thead th,
+  .data-table tbody td {
+    padding: 8px 6px;
+    font-size: 10px;
+  }
+  
+  .command-bar {
+    padding: 8px 12px;
+  }
+  
+  .prompt-text {
+    font-size: 10px;
+  }
+  
+  .hint-button {
+    font-size: 9px;
   }
 }
 

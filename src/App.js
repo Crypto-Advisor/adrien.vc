@@ -126,7 +126,7 @@ function App() {
           >
             <div className="panel-header">
               <span className="panel-title">
-                <span className="icon">◆</span> NEURAL VISUALIZATION
+                <span className="icon">◆</span> QUANTITATIVE MODELS
               </span>
               <span className="panel-code">3D</span>
             </div>
