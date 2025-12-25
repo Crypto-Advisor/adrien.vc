@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/adrien.vc/static/css/main.0d372201.css",
+    "main.js": "/adrien.vc/static/js/main.1bd14c76.js",
+    "index.html": "/adrien.vc/index.html",
+    "main.0d372201.css.map": "/adrien.vc/static/css/main.0d372201.css.map",
+    "main.1bd14c76.js.map": "/adrien.vc/static/js/main.1bd14c76.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0d372201.css",
+    "static/js/main.1bd14c76.js"
+  ]
+}
