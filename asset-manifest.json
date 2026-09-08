@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.9479d238.css",
-    "main.js": "/static/js/main.f66729a7.js",
+    "main.css": "/static/css/main.f55e5f22.css",
+    "main.js": "/static/js/main.e6e9929c.js",
+    "static/media/adrien-navarre.png": "/static/media/adrien-navarre.12b62ed0eac1ada4eb6a.png",
     "index.html": "/index.html",
-    "main.9479d238.css.map": "/static/css/main.9479d238.css.map",
-    "main.f66729a7.js.map": "/static/js/main.f66729a7.js.map"
+    "static/media/tickertrends.svg": "/static/media/tickertrends.2a0b8f21c910b3f761e09b327e725fe9.svg",
+    "main.f55e5f22.css.map": "/static/css/main.f55e5f22.css.map",
+    "main.e6e9929c.js.map": "/static/js/main.e6e9929c.js.map"
   },
   "entrypoints": [
-    "static/css/main.9479d238.css",
-    "static/js/main.f66729a7.js"
+    "static/css/main.f55e5f22.css",
+    "static/js/main.e6e9929c.js"
   ]
 }
