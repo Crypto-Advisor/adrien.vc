@@ -47,7 +47,9 @@ function App() {
               </div>
             </div>
             <div className="work-proof">
-              <p className="research-statement">Used across all areas of institutional asset management research.</p>
+              <div className="ranking"><span className="ranking-number">#2</span><p>Highest-traffic financial alternative data business</p></div>
+              <div className="ranking"><span className="ranking-number">#1</span><p>Most followed on social media in financial alternative data</p></div>
+              <p className="organic-note">All grown through organic content.</p>
               <div className="proof-footer"><span>Institutional investors</span><span aria-hidden="true">↗</span></div>
             </div>
           </div>
@@ -64,6 +66,14 @@ function App() {
             <article className="experience"><span className="experience-number">01</span><div><h3>TickerTrends</h3><p>CEO & Founder</p></div><span className="experience-status">Current</span></article>
             <article className="experience"><span className="experience-number">02</span><div><h3>Anantak Robotics</h3><p>Project Manager · Robotics Engineer</p></div><span className="experience-status">Previously</span></article>
             <article className="experience"><span className="experience-number">03</span><div><h3>Kilonova Ventures</h3><p>Analyst</p></div><span className="experience-status">Previously</span></article>
+          </div>
+        </section>
+
+        <section className="education-section wrap" aria-labelledby="education-title">
+          <h2 className="section-label" id="education-title">Education</h2>
+          <div className="education-content">
+            <ul className="education-schools"><li>Harvard-Westlake</li><li>George Washington University</li><li>Southern Methodist University</li></ul>
+            <p className="education-fields"><span>Fields of study</span>Electrical Engineering &amp; Computer Science</p>
           </div>
         </section>
 
