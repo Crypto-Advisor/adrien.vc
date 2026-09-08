@@ -1,310 +1,89 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './App.css';
-import ThreeJsPanel from './ThreeJsPanel';
+import portrait from './images/adrien-navarre.png';
+import tickertrendsLogo from './images/tickertrends.svg';
 
-function TickerItem({ text, delay = 0 }) {
-  return (
-    <span className="ticker-item" style={{ animationDelay: `${delay}s` }}>
-      {text}
-    </span>
-  );
-}
-
-function ProgressBar({ label, value, color }) {
-  const [width, setWidth] = useState(0);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setWidth(value), 100);
-    return () => clearTimeout(timer);
-  }, [value]);
-
-  return (
-    <div className="progress-container">
-      <div className="progress-label">{label}</div>
-      <div className="progress-bar">
-        <div 
-          className="progress-fill" 
-          style={{ width: `${width}%`, backgroundColor: color }}
-        ></div>
-        <span className="progress-value">{value}%</span>
-      </div>
-    </div>
-  );
-}
+const Arrow = () => <span aria-hidden="true">↗</span>;
+const links = [
+  ['LinkedIn', 'https://www.linkedin.com/in/adriennav/'],
+  ['GitHub', 'https://github.com/Crypto-Advisor'],
+  ['YouTube', 'https://www.youtube.com/@adrien_nav'],
+];
 
 function App() {
-  const [time, setTime] = useState(new Date());
-  const [activePanel, setActivePanel] = useState(null);
-  const [dataPoints, setDataPoints] = useState([
-    { value: 12.5, trend: 'up' },
-    { value: 8.3, trend: 'down' },
-    { value: 15.7, trend: 'up' }
-  ]);
-
-  useEffect(() => {
-    const timer = setInterval(() => setTime(new Date()), 1000);
-    return () => clearInterval(timer);
-  }, []);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setDataPoints(prev => prev.map(point => ({
-        value: Math.max(0, Math.min(20, point.value + (Math.random() - 0.5) * 2)),
-        trend: Math.random() > 0.5 ? 'up' : 'down'
-      })));
-    }, 2000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const skills = [
-    'Java', 'C', 'C++', 'Typescript', 'React', 'Express',
-    'Mongo', 'PostgreSQL', 'NodeJs', 'Flutter', 'Dart',
-    'Python', 'Rust', 'Solidity', 'Golang', 'PHP',
-    'Django', 'Flask', 'BASH', 'Docker'
-  ];
-
-  const experience = [
-    { role: 'CEO & Founder', domain: 'TickerTrends', status: 'ACTIVE', level: 95 },
-    { role: 'Project Manager', domain: 'Anantak Robotics', status: 'COMPLETE', level: 90 },
-    { role: 'Robotics Engineer', domain: 'Anantak Robotics', status: 'COMPLETE', level: 88 },
-    { role: 'Analyst', domain: 'Kilonova Ventures', status: 'COMPLETE', level: 85 }
-  ];
-
-  const tickerItems = [
-    'PORTFOLIO ACTIVE', 'SYSTEMS ONLINE', 'EXPERTISE: QUANTITATIVE FINANCE',
-    'FULL-STACK DEVELOPMENT', 'ROBOTICS AUTOMATION', 'ALTERNATIVE DATA'
-  ];
-
   return (
-    <div className="App">
-      <div className="navarre-terminal">
-        {/* Animated Ticker Bar */}
-        <div className="ticker-bar">
-          <div className="ticker-content">
-            {tickerItems.map((item, idx) => (
-              <TickerItem key={idx} text={item} delay={idx * 0.5} />
-            ))}
-            {tickerItems.map((item, idx) => (
-              <TickerItem key={`dup-${idx}`} text={item} delay={idx * 0.5} />
-            ))}
+    <div className="portfolio" id="top">
+      <a className="skip-link" href="#main">Skip to content</a>
+      <header className="site-header wrap">
+        <a className="wordmark" href="#top" aria-label="Adrien Navarre home">adrien<span> / </span>navarre</a>
+        <nav aria-label="Main navigation">
+          <a href="#work">Work</a>
+          <a href="#background">Background</a>
+          <a href="mailto:adrien@tickertrends.io">Get in touch <Arrow /></a>
+        </nav>
+      </header>
+
+      <main id="main">
+        <section className="hero wrap" aria-labelledby="hero-title">
+          <h1 id="hero-title">Adrien Navarre.<br /><span>Building TickerTrends.</span></h1>
+          <div className="hero-bottom">
+            <p>Founder working across institutional finance,<br className="desktop-break" /> alternative data, and software.</p>
+            <a className="text-link" href="#work">Explore my work <span aria-hidden="true">↓</span></a>
           </div>
-        </div>
+          <div className="hero-caption"><span>Currently building TickerTrends</span><span>Finance / Software / Robotics</span></div>
+        </section>
 
-        {/* Top Status Bar */}
-        <div className="status-bar">
-          <div className="status-left">
-            <span className="terminal-logo">NAVARRE</span>
-            <span className="separator">|</span>
-            <span className="user-id">ADRIEN.VC</span>
-            <span className="separator">|</span>
-            <span className="session-status">
-              <span className="pulse-dot"></span>SESSION ACTIVE
-            </span>
-          </div>
-          <div className="status-right">
-            <div className="live-data">
-              {dataPoints.map((point, idx) => (
-                <span key={idx} className={`data-point ${point.trend}`}>
-                  {point.value.toFixed(1)} {point.trend === 'up' ? '▲' : '▼'}
-                </span>
-              ))}
-            </div>
-            <span className="separator">|</span>
-            <span className="time">{time.toLocaleTimeString('en-US', { hour12: false })}</span>
-            <span className="separator">|</span>
-            <span className="date">{time.toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' }).toUpperCase()}</span>
-          </div>
-        </div>
-
-        {/* Main Content Grid */}
-        <div className="terminal-grid">
-          {/* Three.js Visualization Panel - Top Left */}
-          <div 
-            className={`panel panel-threejs ${activePanel === 'threejs' ? 'panel-active' : ''}`}
-            onMouseEnter={() => setActivePanel('threejs')}
-            onMouseLeave={() => setActivePanel(null)}
-          >
-            <div className="panel-header">
-              <span className="panel-title">
-                <span className="icon">◆</span> QUANTITATIVE MODELS
-              </span>
-              <span className="panel-code">3D</span>
-            </div>
-            <div className="panel-content panel-content-threejs">
-              <ThreeJsPanel />
-            </div>
-          </div>
-
-          {/* Left Panel - Profile */}
-          <div 
-            className={`panel panel-profile ${activePanel === 'profile' ? 'panel-active' : ''}`}
-            onMouseEnter={() => setActivePanel('profile')}
-            onMouseLeave={() => setActivePanel(null)}
-          >
-            <div className="panel-header">
-              <span className="panel-title">
-                <span className="icon">◆</span> PROFILE
-              </span>
-              <span className="panel-code">DES</span>
-            </div>
-            <div className="panel-content">
-              <div className="profile-section fade-in">
-                <div className="field-row">
-                  <span className="field-label">NAME</span>
-                  <span className="field-value glow-text">ADRIEN NAVARRE</span>
-                </div>
-                <div className="field-row">
-                  <span className="field-label">CONTACT</span>
-                  <span className="field-value email">
-                    <a href="mailto:adrien@tickertrends.io" className="animated-link">
-                      adrien@tickertrends.io
-                    </a>
-                  </span>
-                </div>
-                <div className="field-row">
-                  <span className="field-label">STATUS</span>
-                  <span className="field-value status-active">
-                    <span className="status-dot"></span> AVAILABLE
-                  </span>
-                </div>
-              </div>
-
-              <div className="profile-section fade-in" style={{ animationDelay: '0.1s' }}>
-                <div className="section-header">
-                  <span className="header-line"></span>DESCRIPTION
-                </div>
-                <div className="description-text">
-                  CEO & Founder of TickerTrends, serving retail and institutional clients managing $30B+ in assets. 
-                  Experienced in quantitative finance, full-stack software development, and robotics automation. 
-                  Leading a talented team building alternative data solutions for the financial industry.
-                </div>
-              </div>
-
-              <div className="profile-section fade-in" style={{ animationDelay: '0.2s' }}>
-                <div className="section-header">
-                  <span className="header-line"></span>PROFICIENCY
-                </div>
-                <ProgressBar label="Quantitative Finance" value={95} color="#FF8C00" />
-                <ProgressBar label="Full Stack Development" value={93} color="#4a9eff" />
-                <ProgressBar label="Robotics" value={88} color="#00ff00" />
-              </div>
-
-              <div className="profile-section fade-in" style={{ animationDelay: '0.3s' }}>
-                <div className="section-header">
-                  <span className="header-line"></span>LINKS
-                </div>
-                <div className="field-row link-row">
-                  <span className="field-label">GITHUB</span>
-                  <span className="field-value">
-                    <a href="https://github.com/Crypto-Advisor" target="_blank" rel="noopener noreferrer" className="animated-link">
-                      <span className="link-arrow">→</span> /Crypto-Advisor
-                    </a>
-                  </span>
-                </div>
-                <div className="field-row link-row">
-                  <span className="field-label">LINKEDIN</span>
-                  <span className="field-value">
-                    <a href="https://www.linkedin.com/in/adriennav/" target="_blank" rel="noopener noreferrer" className="animated-link">
-                      <span className="link-arrow">→</span> /in/adriennav
-                    </a>
-                  </span>
-                </div>
-                <div className="field-row link-row">
-                  <span className="field-label">YOUTUBE</span>
-                  <span className="field-value">
-                    <a href="https://www.youtube.com/@adrien_nav" target="_blank" rel="noopener noreferrer" className="animated-link">
-                      <span className="link-arrow">→</span> /@adrien_nav
-                    </a>
-                  </span>
-                </div>
+        <section className="work-section wrap" id="work" aria-labelledby="work-title">
+          <div className="section-label"><span>01 / Current focus</span><span>From data to decisions</span></div>
+          <div className="featured-work">
+            <div className="work-story">
+              <img className="company-mark" src={tickertrendsLogo} alt="" width="44" height="44" />
+              <div>
+                <p className="eyebrow">CEO & Founder</p>
+                <h2 id="work-title">TickerTrends</h2>
+                <p className="work-description">Alternative data.<br />A different perspective on markets.</p>
+                <p className="supporting-copy">Leading a team building alternative data solutions for institutional investors.</p>
+                <a className="text-link" href="https://tickertrends.io" target="_blank" rel="noopener noreferrer">Visit TickerTrends <Arrow /></a>
               </div>
             </div>
+            <div className="work-proof">
+              <p className="research-statement">Used across all areas of institutional asset management research.</p>
+              <div className="proof-footer"><span>Institutional investors</span><span aria-hidden="true">↗</span></div>
+            </div>
           </div>
+        </section>
 
-          {/* Right Top Panel - Experience */}
-          <div 
-            className={`panel panel-experience ${activePanel === 'experience' ? 'panel-active' : ''}`}
-            onMouseEnter={() => setActivePanel('experience')}
-            onMouseLeave={() => setActivePanel(null)}
-          >
-            <div className="panel-header">
-              <span className="panel-title">
-                <span className="icon">◆</span> EXPERIENCE SUMMARY
-              </span>
-              <span className="panel-code">EXP</span>
-            </div>
-            <div className="panel-content">
-              <table className="data-table">
-                <thead>
-                  <tr>
-                    <th>ROLE</th>
-                    <th>DOMAIN</th>
-                    <th>STATUS</th>
-                    <th>LEVEL</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {experience.map((exp, idx) => (
-                    <tr key={idx} className="table-row-animated" style={{ animationDelay: `${idx * 0.1}s` }}>
-                      <td className="role-cell">{exp.role}</td>
-                      <td>{exp.domain}</td>
-                      <td className="status-cell">
-                        <span className="status-indicator"></span> {exp.status}
-                      </td>
-                      <td>
-                        <div className="mini-progress">
-                          <div className="mini-fill" style={{ width: `${exp.level}%` }}></div>
-                        </div>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+        <section className="background-section wrap" id="background" aria-labelledby="background-title">
+          <div className="background-intro">
+            <p className="section-label">02 / Background</p>
+            <img className="portrait" src={portrait} alt="Adrien Navarre" width="512" height="512" loading="lazy" />
+            <h2 id="background-title">A background in finance.<br /><span>A foundation in engineering.</span></h2>
+            <p>My work spans quantitative finance, full-stack development, and robotics automation. I like connecting technical depth with real-world problems.</p>
           </div>
+          <div className="experience-list">
+            <article className="experience"><span className="experience-number">01</span><div><h3>TickerTrends</h3><p>CEO & Founder</p></div><span className="experience-status">Current</span></article>
+            <article className="experience"><span className="experience-number">02</span><div><h3>Anantak Robotics</h3><p>Project Manager · Robotics Engineer</p></div><span className="experience-status">Previously</span></article>
+            <article className="experience"><span className="experience-number">03</span><div><h3>Kilonova Ventures</h3><p>Analyst</p></div><span className="experience-status">Previously</span></article>
+          </div>
+        </section>
 
-          {/* Right Bottom Panel - Skills */}
-          <div 
-            className={`panel panel-skills ${activePanel === 'skills' ? 'panel-active' : ''}`}
-            onMouseEnter={() => setActivePanel('skills')}
-            onMouseLeave={() => setActivePanel(null)}
-          >
-            <div className="panel-header">
-              <span className="panel-title">
-                <span className="icon">◆</span> TECHNICAL SKILLS
-              </span>
-              <span className="panel-code">SKL</span>
-            </div>
-            <div className="panel-content">
-              <div className="skills-container">
-                {skills.map((skill, idx) => (
-                  <div 
-                    key={idx} 
-                    className="skill-item"
-                    style={{ animationDelay: `${idx * 0.05}s` }}
-                  >
-                    <span className="skill-bullet">▸</span>
-                    <span className="skill-name">{skill}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+        <section className="practice-section wrap" aria-labelledby="practice-title">
+          <div className="section-label"><h2 id="practice-title">03 / Technical practice</h2></div>
+          <div className="practice-grid">
+            <article><span className="practice-index">I.</span><h3>Markets & data</h3><p>Quantitative finance and alternative data. At 14–15, I started a YouTube channel about quantitative finance that grew to 20,000 followers.</p><span className="stack">Python / PostgreSQL / MongoDB</span></article>
+            <article><span className="practice-index">II.</span><h3>Software</h3><p>Full-stack development, including machine learning, from the interface to the infrastructure behind it.</p><span className="stack">TypeScript / React / Node.js / Docker</span></article>
+            <article><span className="practice-index">III.</span><h3>Robotics & systems</h3><p>Engineering and automation where software meets the physical world.</p><span className="stack">C / C++ / Rust / Python</span></article>
           </div>
-        </div>
+        </section>
 
-        {/* Bottom Command Bar */}
-        <div className="command-bar">
-          <div className="command-prompt">
-            <span className="prompt-symbol blink">{'>'}</span>
-            <span className="prompt-text">READY FOR INPUT</span>
-          </div>
-          <div className="command-hints">
-            <button className="hint-button">F1:HELP</button>
-            <button className="hint-button">F2:MENU</button>
-            <button className="hint-button">F3:SEARCH</button>
-          </div>
-        </div>
-      </div>
+        <section className="contact-section wrap" aria-labelledby="contact-title">
+          <p className="section-label">04 / Connect</p>
+          <div className="contact-heading"><h2 id="contact-title">Let’s talk.</h2><a className="contact-arrow" href="mailto:adrien@tickertrends.io" aria-label="Email Adrien"><Arrow /></a></div>
+          <a className="email-link" href="mailto:adrien@tickertrends.io">adrien@tickertrends.io</a>
+        </section>
+      </main>
+
+      <footer className="site-footer wrap"><span>© {new Date().getFullYear()} Adrien Navarre</span><div>{links.map(([label, href]) => <a key={label} href={href} target="_blank" rel="noopener noreferrer">{label} <Arrow /></a>)}</div><a href="#top">Back to top ↑</a></footer>
     </div>
   );
 }
