@@ -61,6 +61,7 @@ function App() {
             <img className="portrait" src={portrait} alt="Adrien Navarre" width="512" height="512" loading="lazy" />
             <h2 id="background-title">A background in finance.<br /><span>A foundation in engineering.</span></h2>
             <p>My work spans quantitative finance, full-stack development, and robotics automation. I like connecting technical depth with real-world problems.</p>
+            <div className="profile-location"><span>Location</span><p>Dallas, Texas &amp; Malibu, California</p></div>
           </div>
           <div className="experience-list">
             <article className="experience"><span className="experience-number">01</span><div><h3>TickerTrends</h3><p>CEO & Founder</p></div><span className="experience-status">Current</span></article>

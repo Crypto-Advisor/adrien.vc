@@ -128,3 +128,7 @@ html { scroll-padding-top: 136px; }
 .education-fields span { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 8px; }
 @media (max-width: 1000px) { .ranking { grid-template-columns: 64px minmax(0, 1fr); gap: 16px; } .ranking-number { font-size: 48px; } .education-section { gap: 36px; grid-template-columns: 1fr 1fr; } }
 @media (max-width: 720px) { .education-section { grid-template-columns: 1fr; gap: 26px; padding-bottom: 48px; } }
+
+.profile-location { margin-top: 24px; }
+.profile-location > span { font-size: 12px; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); }
+.profile-location p { margin-top: 8px; font-size: 16px; line-height: 1.7; }
