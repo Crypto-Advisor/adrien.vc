@@ -2,9 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#fafaf8" />
+    <meta name="application-name" content="Adrien Navarre" />
     <title>Adrien Navarre | TickerTrends Founder &amp; CEO</title>
     <meta name="description" content="Adrien Navarre is the founder and CEO of TickerTrends, building institutional alternative data and software." />
     <meta name="author" content="Adrien Navarre" />
@@ -16,28 +21,76 @@
     <meta property="og:description" content="Adrien Navarre is the founder and CEO of TickerTrends, building institutional alternative data and software." />
     <meta property="og:site_name" content="Adrien Navarre" />
     <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="https://adrien.vc/adrien-navarre.png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:image:alt" content="Portrait of Adrien Navarre" />
+    <meta property="profile:first_name" content="Adrien" />
+    <meta property="profile:last_name" content="Navarre" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:url" content="https://adrien.vc/" />
     <meta name="twitter:title" content="Adrien Navarre | TickerTrends Founder &amp; CEO" />
     <meta name="twitter:description" content="Adrien Navarre is the founder and CEO of TickerTrends, building institutional alternative data and software." />
+    <meta name="twitter:image" content="https://adrien.vc/adrien-navarre.png" />
+    <meta name="twitter:image:alt" content="Portrait of Adrien Navarre" />
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfilePage",
-      "url": "https://adrien.vc/",
-      "mainEntity": {
-        "@type": "Person",
-        "@id": "https://adrien.vc/#person",
-        "name": "Adrien Navarre",
-        "jobTitle": "Founder & CEO",
-        "homeLocation": [
-          { "@type": "Place", "name": "Dallas, Texas" },
-          { "@type": "Place", "name": "Malibu, California" }
-        ],
-        "worksFor": { "@type": "Organization", "name": "TickerTrends" },
-        "url": "https://adrien.vc/",
-        "sameAs": ["https://www.linkedin.com/in/adriennav/", "https://github.com/Crypto-Advisor"]
-      }
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://adrien.vc/#website",
+          "url": "https://adrien.vc/",
+          "name": "Adrien Navarre",
+          "alternateName": "adrien.vc",
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "ProfilePage",
+          "@id": "https://adrien.vc/#profile-page",
+          "url": "https://adrien.vc/",
+          "name": "Adrien Navarre | TickerTrends Founder & CEO",
+          "description": "Adrien Navarre is the founder and CEO of TickerTrends, building institutional alternative data and software.",
+          "isPartOf": { "@id": "https://adrien.vc/#website" },
+          "primaryImageOfPage": { "@id": "https://adrien.vc/#primary-image" },
+          "mainEntity": { "@id": "https://adrien.vc/#person" },
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://adrien.vc/#primary-image",
+          "url": "https://adrien.vc/adrien-navarre.png",
+          "contentUrl": "https://adrien.vc/adrien-navarre.png",
+          "width": 512,
+          "height": 512,
+          "caption": "Adrien Navarre"
+        },
+        {
+          "@type": "Person",
+          "@id": "https://adrien.vc/#person",
+          "name": "Adrien Navarre",
+          "givenName": "Adrien",
+          "familyName": "Navarre",
+          "jobTitle": "Founder & CEO",
+          "image": { "@id": "https://adrien.vc/#primary-image" },
+          "homeLocation": [
+            { "@type": "Place", "name": "Dallas, Texas" },
+            { "@type": "Place", "name": "Malibu, California" }
+          ],
+          "worksFor": {
+            "@type": "Organization",
+            "@id": "https://tickertrends.io/#organization",
+            "name": "TickerTrends",
+            "url": "https://tickertrends.io/"
+          },
+          "url": "https://adrien.vc/",
+          "sameAs": [
+            "https://www.linkedin.com/in/adriennav/",
+            "https://github.com/Crypto-Advisor",
+            "https://www.youtube.com/@adrien_nav"
+          ]
+        }
+      ]
     }
     </script>
     <meta name="format-detection" content="telephone=no" />
