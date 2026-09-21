@@ -42,7 +42,7 @@ function App() {
                 <p className="eyebrow">CEO & Founder</p>
                 <h2 id="work-title">TickerTrends</h2>
                 <p className="work-description">Alternative data.<br />A different perspective on markets.</p>
-                <p className="supporting-copy">Alternative data is information from outside traditional financial reports that helps show how companies and markets are performing. TickerTrends turns it into clear research for investors.</p>
+                <p className="supporting-copy">Alternative data helps reveal what people and businesses may buy by analyzing how they interact with their devices. TickerTrends turns those patterns into a clearer view of where demand is heading.</p>
                 <a className="text-link" href="https://tickertrends.io" target="_blank" rel="noopener noreferrer">Visit TickerTrends <Arrow /></a>
               </div>
             </div>
