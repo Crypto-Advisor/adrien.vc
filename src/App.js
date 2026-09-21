@@ -97,7 +97,7 @@ function App() {
         </section>
 
         <section className="story-section wrap" aria-labelledby="story-title">
-          <h2 id="story-title">From curiosity<br /><span>to company.</span></h2>
+          <h2 id="story-title">How TickerTrends began</h2>
           <div className="story-copy">
             <p className="story-lede">I first became interested in markets as a teenager, when I started a YouTube channel about quantitative finance. The audience grew, but more importantly, it taught me to follow questions wherever they led.</p>
             <p>At university, I studied computer science while working in robotics and machine learning. Most evenings, I drove to my office and built TickerTrends late into the night. Sharing the work publicly brought thoughtful feedback and unexpected connections.</p>
