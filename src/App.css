@@ -52,12 +52,19 @@ h1 > span { color: #797d73; }
 .story-lede::first-letter { float: left; margin: 8px 10px 0 0; color: #233d31; font-family: Georgia, serif; font-size: 56px; line-height: .72; }
 .story-copy p + p { margin-top: 20px; }
 .story-copy .text-link { margin-top: 28px; }
-.experience { display: flex; gap: 24px; padding: 27px 0; border-top: 1px solid var(--line); }
+.experience { display: flex; align-items: center; gap: 24px; padding: 27px 0; border-top: 1px solid var(--line); }
 .experience:last-child { border-bottom: 1px solid var(--line); }
-.experience-number { color: var(--muted); font-size: 12px; padding-top: 6px; }
+.experience-logo { display: grid; place-items: center; width: 124px; height: 40px; flex: 0 0 124px; }
+.experience-logo img { display: block; max-width: 100%; max-height: 100%; object-fit: contain; }
+.experience-logo--tickertrends { justify-items: start; }
+.experience-logo--tickertrends img { width: 38px; height: 38px; }
+.experience-logo--anantak { justify-items: start; }
+.experience-logo--anantak img { width: 120px; height: auto; }
+.experience-logo--kilonova { padding: 9px 10px; background: #121212; }
+.experience-logo--kilonova img { width: 106px; height: auto; }
 .experience h3 { font-size: 19px; letter-spacing: -.025em; }
 .experience p { margin-top: 8px; color: var(--muted); font-size: 14px; line-height: 1.6; }
-.experience-status { font-size: 12px; color: var(--muted); margin-left: auto; padding-top: 6px; }
+.experience-status { font-size: 12px; color: var(--muted); margin-left: auto; }
 .experience:first-child .experience-status { color: var(--accent); }
 .practice-section { border-top: 1px solid var(--line); padding-top: 24px; }
 .section-label h2 { font: inherit; }
@@ -127,7 +134,12 @@ h1 { margin-top: 0; font-size: clamp(40px, 5.9vw, 82px); }
 @media (max-width: 360px) {
   .wrap { width: calc(100% - 32px); }
   h1 { font-size: 32px; }
-  .experience { display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: 10px; }
+  .experience { display: grid; grid-template-columns: 84px minmax(0, 1fr); gap: 12px; }
+  .experience-logo { width: 84px; height: 34px; }
+  .experience-logo--tickertrends img { width: 32px; height: 32px; }
+  .experience-logo--anantak img { width: 82px; }
+  .experience-logo--kilonova { padding: 8px; }
+  .experience-logo--kilonova img { width: 68px; }
   .experience-status { grid-column: 2; margin-left: 0; padding-top: 0; }
   .background-intro h2 { font-size: 25px; }
 }

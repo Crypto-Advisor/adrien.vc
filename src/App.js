@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import portrait from './images/adrien-navarre.png';
 import tickertrendsLogo from './images/tickertrends.svg';
+import anantakLogo from './images/anantak-logo.png';
+import kilonovaLogo from './images/kilonova-logo.svg';
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
 const Monogram = () => (
@@ -76,9 +78,21 @@ function App() {
             <div className="profile-location"><span>Location</span><p>Dallas, Texas &amp; Malibu, California</p></div>
           </div>
           <div className="experience-list">
-            <article className="experience"><span className="experience-number">01</span><div><h3>TickerTrends</h3><p>CEO & Founder</p></div><span className="experience-status">Current</span></article>
-            <article className="experience"><span className="experience-number">02</span><div><h3>Anantak Robotics</h3><p>Project Manager · Robotics Engineer</p></div><span className="experience-status">Previously</span></article>
-            <article className="experience"><span className="experience-number">03</span><div><h3>Kilonova Ventures</h3><p>Analyst</p></div><span className="experience-status">Previously</span></article>
+            <article className="experience">
+              <span className="experience-logo experience-logo--tickertrends"><img src={tickertrendsLogo} alt="" /></span>
+              <div><h3>TickerTrends</h3><p>CEO & Founder</p></div>
+              <span className="experience-status">Current</span>
+            </article>
+            <article className="experience">
+              <span className="experience-logo experience-logo--anantak"><img src={anantakLogo} alt="" /></span>
+              <div><h3>Anantak Robotics</h3><p>Project Manager · Robotics Engineer</p></div>
+              <span className="experience-status">Previously</span>
+            </article>
+            <article className="experience">
+              <span className="experience-logo experience-logo--kilonova"><img src={kilonovaLogo} alt="" /></span>
+              <div><h3>Kilonova Ventures</h3><p>Analyst</p></div>
+              <span className="experience-status">Previously</span>
+            </article>
           </div>
         </section>
 
