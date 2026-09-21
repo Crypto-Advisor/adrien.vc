@@ -126,8 +126,14 @@ html { scroll-padding-top: 136px; }
 .organic-note { font-size: 14px; line-height: 1.6; color: #c2cfc5; padding: 0 0 28px; }
 .education-section { display: grid; grid-template-columns: 1fr 1.1fr; gap: 96px; border-top: 1px solid var(--line); padding-block: 32px 64px; }
 .education-schools { list-style: none; margin: 0; padding: 0; }
-.education-schools li { font-family: 'Manrope', sans-serif; font-size: 19px; line-height: 1.6; padding-bottom: 12px; letter-spacing: -.025em; }
-.education-fields { font-size: 16px; line-height: 1.7; color: var(--muted); margin-top: 16px; }
+.education-schools li { display: grid; grid-template-columns: 46px minmax(0, 1fr); align-items: center; gap: 17px; min-height: 62px; border-bottom: 1px solid var(--line); font-family: 'Manrope', sans-serif; font-size: 19px; line-height: 1.35; letter-spacing: -.025em; }
+.education-schools li:first-child { border-top: 1px solid var(--line); }
+.school-mark { position: relative; display: grid; place-items: center; width: 34px; height: 34px; color: #233d31; border: 1px solid #918674; outline: 1px solid rgba(145, 134, 116, .32); outline-offset: 3px; background: #f4f1e9; font-family: Georgia, serif; font-size: 11px; font-weight: 600; letter-spacing: -.04em; line-height: 1; }
+.school-mark::after { content: ''; position: absolute; inset: 3px; border: 1px solid rgba(35, 61, 49, .2); pointer-events: none; }
+.school-mark-hw { color: #6f252c; }
+.school-mark-gw { color: #243b5a; }
+.school-mark-smu { color: #8a2f32; font-size: 9px; letter-spacing: -.07em; }
+.education-fields { font-size: 16px; line-height: 1.7; color: var(--muted); margin-top: 26px; }
 .education-fields span { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 8px; }
 @media (max-width: 1000px) { .ranking { grid-template-columns: 64px minmax(0, 1fr); gap: 16px; } .ranking-number { font-size: 48px; } .education-section { gap: 36px; grid-template-columns: 1fr 1fr; } }
 @media (max-width: 720px) { .education-section { grid-template-columns: 1fr; gap: 26px; padding-bottom: 48px; } }

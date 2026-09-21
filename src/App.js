@@ -83,7 +83,11 @@ function App() {
         <section className="education-section wrap" aria-labelledby="education-title">
           <h2 className="section-label" id="education-title">Education</h2>
           <div className="education-content">
-            <ul className="education-schools"><li>Harvard-Westlake</li><li>George Washington University</li><li>Southern Methodist University</li></ul>
+            <ul className="education-schools">
+              <li><span className="school-mark school-mark-hw" aria-hidden="true">HW</span><span>Harvard-Westlake</span></li>
+              <li><span className="school-mark school-mark-gw" aria-hidden="true">GW</span><span>George Washington University</span></li>
+              <li><span className="school-mark school-mark-smu" aria-hidden="true">SMU</span><span>Southern Methodist University</span></li>
+            </ul>
             <p className="education-fields"><span>Fields of study</span>Electrical Engineering &amp; Computer Science</p>
           </div>
         </section>
