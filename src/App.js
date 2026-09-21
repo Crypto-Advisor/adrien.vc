@@ -33,10 +33,16 @@ function App() {
 
       <main id="main">
         <section className="hero wrap" aria-labelledby="hero-title">
-          <h1 id="hero-title">Adrien Navarre.<br /><span>Building TickerTrends.</span></h1>
-          <div className="hero-bottom">
-            <p>Founder working across institutional finance,<br className="desktop-break" /> alternative data, and software.</p>
-            <a className="text-link" href="#work">Explore my work <span aria-hidden="true">↓</span></a>
+          <div className="hero-grid">
+            <h1 id="hero-title">Adrien Navarre.<br /><span>Building TickerTrends.</span></h1>
+            <div className="portrait-frame hero-portrait">
+              <img className="portrait" src={portrait} alt="Adrien Navarre" width="512" height="512" />
+              <span className="portrait-seal"><Monogram /></span>
+            </div>
+            <div className="hero-bottom">
+              <p>Founder working across institutional finance,<br className="desktop-break" /> alternative data, and software.</p>
+              <a className="text-link" href="#work">Explore my work <span aria-hidden="true">↓</span></a>
+            </div>
           </div>
           <div className="hero-caption"><span>Currently building TickerTrends</span><span>Finance / Software / Robotics</span></div>
         </section>
@@ -65,10 +71,6 @@ function App() {
         <section className="background-section wrap" id="background" aria-labelledby="background-title">
           <div className="background-intro">
             <p className="section-label">02 / Background</p>
-            <div className="portrait-frame">
-              <img className="portrait" src={portrait} alt="Adrien Navarre" width="512" height="512" loading="lazy" />
-              <span className="portrait-seal"><Monogram /></span>
-            </div>
             <h2 id="background-title">A background in finance.<br /><span>A foundation in engineering.</span></h2>
             <p>My work spans quantitative finance, full-stack development, and robotics automation. I like connecting technical depth with real-world problems.</p>
             <div className="profile-location"><span>Location</span><p>Dallas, Texas &amp; Malibu, California</p></div>
