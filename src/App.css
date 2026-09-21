@@ -2,8 +2,7 @@
 .skip-link { position: fixed; top: -100px; left: 20px; padding: 14px; background: var(--ink); color: white; z-index: 10; }
 .skip-link:focus { top: 12px; }
 .site-header { min-height: 112px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--line); gap: 32px; }
-.wordmark { font-weight: 650; font-size: 19px; letter-spacing: -.7px; white-space: nowrap; }
-.wordmark span { color: #8b8f86; padding: 0 4px; font-weight: 400; }
+.wordmark { font-family: 'Manrope', sans-serif; font-weight: 650; font-size: 21px; letter-spacing: -.11em; line-height: 1; white-space: nowrap; }
 .site-header nav { display: flex; gap: 34px; font-size: 14px; align-items: center; }
 .site-header nav a { padding: 12px 0; }
 a { transition: color .2s; }

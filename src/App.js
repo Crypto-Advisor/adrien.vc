@@ -15,7 +15,7 @@ function App() {
     <div className="portfolio" id="top">
       <a className="skip-link" href="#main">Skip to content</a>
       <header className="site-header wrap">
-        <a className="wordmark" href="#top" aria-label="Adrien Navarre home">adrien<span> / </span>navarre</a>
+        <a className="wordmark" href="#top" aria-label="Adrien Navarre home">AN</a>
         <nav aria-label="Main navigation">
           <a href="#work">Work</a>
           <a href="#background">Background</a>
