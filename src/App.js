@@ -116,7 +116,7 @@ function App() {
         </section>
 
         <section className="work-section wrap" id="work" aria-labelledby="work-title">
-          <div className="section-label"><span>01 / Current focus</span><span>From data to decisions</span></div>
+          <div className="section-label"><span>01 / Current focus</span></div>
           <div className="featured-work">
             <div className="work-story">
               <img className="company-mark" src={tickertrendsLogo} alt="" width="44" height="44" />
