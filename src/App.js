@@ -74,7 +74,7 @@ function App() {
           <div className="background-intro">
             <p className="section-label">02 / Background</p>
             <h2 id="background-title">A background in finance.<br /><span>A foundation in engineering.</span></h2>
-            <p>My work spans quantitative finance, full-stack development, and robotics automation. I am intensely competitive: I study where incumbents are slow, expensive, or complacent, then build systems designed to take their customers.</p>
+            <p>The advantage is the combination of disciplines: technical depth to build the systems, market knowledge to identify what matters, and managerial execution to turn both into a durable business. We run TickerTrends as a technology company serving finance, with software-level iteration, measurement, and operating discipline. That integrated approach lets us solve problems and compound learning in ways competitors built around a traditional data-provider model are not structured to match.</p>
             <div className="profile-location"><span>Location</span><p>Dallas, Texas &amp; Malibu, California</p></div>
           </div>
           <div className="experience-list">
