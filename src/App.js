@@ -4,6 +4,14 @@ import portrait from './images/adrien-navarre.png';
 import tickertrendsLogo from './images/tickertrends.svg';
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
+const Monogram = () => (
+  <svg className="royal-monogram" viewBox="0 0 64 64" aria-hidden="true">
+    <rect className="monogram-border" x="3.5" y="3.5" width="57" height="57" />
+    <rect className="monogram-border monogram-border-inner" x="7.5" y="7.5" width="49" height="49" />
+    <path className="monogram-crown" d="M19 23l2-8 7 6 4-10 4 10 7-6 2 8H19zM21 26h22" />
+    <text className="monogram-initials" x="32" y="46" textAnchor="middle">AN</text>
+  </svg>
+);
 const links = [
   ['LinkedIn', 'https://www.linkedin.com/in/adriennav/'],
   ['GitHub', 'https://github.com/Crypto-Advisor'],
@@ -15,7 +23,7 @@ function App() {
     <div className="portfolio" id="top">
       <a className="skip-link" href="#main">Skip to content</a>
       <header className="site-header wrap">
-        <a className="wordmark" href="#top" aria-label="Adrien Navarre home">AN</a>
+        <a className="wordmark" href="#top" aria-label="Adrien Navarre home"><Monogram /></a>
         <nav aria-label="Main navigation">
           <a href="#work">Work</a>
           <a href="#background">Background</a>
@@ -57,7 +65,10 @@ function App() {
         <section className="background-section wrap" id="background" aria-labelledby="background-title">
           <div className="background-intro">
             <p className="section-label">02 / Background</p>
-            <img className="portrait" src={portrait} alt="Adrien Navarre" width="512" height="512" loading="lazy" />
+            <div className="portrait-frame">
+              <img className="portrait" src={portrait} alt="Adrien Navarre" width="512" height="512" loading="lazy" />
+              <span className="portrait-seal"><Monogram /></span>
+            </div>
             <h2 id="background-title">A background in finance.<br /><span>A foundation in engineering.</span></h2>
             <p>My work spans quantitative finance, full-stack development, and robotics automation. I like connecting technical depth with real-world problems.</p>
             <div className="profile-location"><span>Location</span><p>Dallas, Texas &amp; Malibu, California</p></div>
