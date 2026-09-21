@@ -100,8 +100,9 @@ function App() {
           <h2 id="story-title">How TickerTrends began</h2>
           <div className="story-copy">
             <p className="story-lede">I first became interested in markets as a teenager, when I started a YouTube channel about quantitative finance. The audience grew, but more importantly, it taught me to follow questions wherever they led.</p>
-            <p>At university, I studied computer science while working in robotics and machine learning. Most evenings, I drove to my office and built TickerTrends late into the night. Sharing the work publicly brought thoughtful feedback and unexpected connections.</p>
-            <p>Going full-time was only the beginning. We spent the next year and a half iterating with users, listening closely, and refining the product until we found a problem we could solve at scale. The objective now is unambiguous: out-execute every incumbent and become the company the market measures them against.</p>
+            <p>At university, I studied computer science while working in robotics and machine learning. Most evenings, I drove to my office and built TickerTrends late into the night. Sharing the work publicly created an early feedback loop: questions became hypotheses, users pressure-tested the answers, and each iteration made the product sharper.</p>
+            <p>Going full-time was only the beginning. We spent the next year and a half building tight feedback loops with users: listen closely, turn friction into product decisions, ship, measure what changed, and feed the learning straight into the next release. Each cycle sharpens our judgment and lets us move faster without lowering the standard.</p>
+            <p>We deliberately pursue challenges established providers dismiss as impossible, too technical, or not worth approaching. Solving those problems in production is how we widen the gap. Our objective is unambiguous: out-execute every incumbent and become the company the market measures them against.</p>
             <a className="text-link" href="https://www.thestockthoughts.com/p/a-conversation-with-adrien-navarre" target="_blank" rel="noopener noreferrer">Read the full conversation <Arrow /></a>
           </div>
         </section>
