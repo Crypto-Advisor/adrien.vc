@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.5876d2c5.css",
+    "main.css": "/static/css/main.55c66328.css",
     "main.js": "/static/js/main.39095df1.js",
     "static/media/adrien-navarre.png": "/static/media/adrien-navarre.12b62ed0eac1ada4eb6a.png",
     "static/media/kilonova-logo.svg": "/static/media/kilonova-logo.b7cf8f44bfd2859b232cc24dd8ab892c.svg",
     "static/media/anantak-logo.png": "/static/media/anantak-logo.5a76e89a0257c0ce512f.png",
     "index.html": "/index.html",
     "static/media/tickertrends.svg": "/static/media/tickertrends.2a0b8f21c910b3f761e09b327e725fe9.svg",
-    "main.5876d2c5.css.map": "/static/css/main.5876d2c5.css.map",
+    "main.55c66328.css.map": "/static/css/main.55c66328.css.map",
     "main.39095df1.js.map": "/static/js/main.39095df1.js.map"
   },
   "entrypoints": [
-    "static/css/main.5876d2c5.css",
+    "static/css/main.55c66328.css",
     "static/js/main.39095df1.js"
   ]
 }
