@@ -13,7 +13,8 @@ const Monogram = () => (
     <path className="monogram-shield monogram-shield-inner" d="M22 15h40v28c0 13-8 22-20 29-12-7-20-16-20-29V15z" />
     <path className="monogram-divider" d="M27 53h30M31 57h22" />
     <path className="monogram-top-ornament" d="M31 20h22M36 17h12" />
-    <text className="monogram-initials" x="42" y="48" textAnchor="middle">AN</text>
+    <text className="monogram-initial monogram-initial-a" x="36.5" y="48" textAnchor="middle">A</text>
+    <text className="monogram-initial monogram-initial-n" x="47.5" y="48" textAnchor="middle">N</text>
   </svg>
 );
 
