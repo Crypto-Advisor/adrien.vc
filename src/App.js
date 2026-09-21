@@ -42,7 +42,7 @@ function App() {
                 <p className="eyebrow">CEO & Founder</p>
                 <h2 id="work-title">TickerTrends</h2>
                 <p className="work-description">Alternative data.<br />A different perspective on markets.</p>
-                <p className="supporting-copy">TickerTrends helps investors understand how companies are performing by analyzing real-world signals such as web traffic, app usage, hiring, and consumer interest.</p>
+                <p className="supporting-copy">TickerTrends helps investors understand companies and markets using information that goes beyond traditional financial reports.</p>
                 <a className="text-link" href="https://tickertrends.io" target="_blank" rel="noopener noreferrer">Visit TickerTrends <Arrow /></a>
               </div>
             </div>
