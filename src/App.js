@@ -82,6 +82,16 @@ function App() {
           </div>
         </section>
 
+        <section className="story-section wrap" aria-labelledby="story-title">
+          <h2 id="story-title">From curiosity<br /><span>to company.</span></h2>
+          <div className="story-copy">
+            <p className="story-lede">I first became interested in markets as a teenager, when I started a YouTube channel about quantitative finance. The audience grew, but more importantly, it taught me to follow questions wherever they led.</p>
+            <p>At university, I studied computer science while working in robotics and machine learning. Most evenings, I drove to my office and built TickerTrends late into the night. Sharing the work publicly brought thoughtful feedback and unexpected connections.</p>
+            <p>Going full-time was only the beginning. We spent the next year and a half iterating with users, listening closely, and refining the product until we found a problem we could solve at scale. TickerTrends continues to evolve through that same cycle: build, learn, and improve.</p>
+            <a className="text-link" href="https://www.thestockthoughts.com/p/a-conversation-with-adrien-navarre" target="_blank" rel="noopener noreferrer">Read the full conversation <Arrow /></a>
+          </div>
+        </section>
+
         <section className="education-section wrap" aria-labelledby="education-title">
           <h2 className="section-label" id="education-title">Education</h2>
           <div className="education-content">
