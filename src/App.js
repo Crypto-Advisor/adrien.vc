@@ -42,7 +42,7 @@ function App() {
                 <p className="eyebrow">CEO & Founder</p>
                 <h2 id="work-title">TickerTrends</h2>
                 <p className="work-description">Alternative data.<br />A different perspective on markets.</p>
-                <p className="supporting-copy">Leading a team building alternative data solutions for institutional investors.</p>
+                <p className="supporting-copy">TickerTrends helps investors understand how companies are performing by analyzing real-world signals such as web traffic, app usage, hiring, and consumer interest.</p>
                 <a className="text-link" href="https://tickertrends.io" target="_blank" rel="noopener noreferrer">Visit TickerTrends <Arrow /></a>
               </div>
             </div>
@@ -50,7 +50,6 @@ function App() {
               <div className="ranking"><span className="ranking-number">#2</span><p>Highest-traffic financial alternative data business</p></div>
               <div className="ranking"><span className="ranking-number">#1</span><p>Most followed on social media in financial alternative data</p></div>
               <p className="organic-note">All grown through organic content.</p>
-              <div className="proof-footer"><span>Institutional investors</span><span aria-hidden="true">↗</span></div>
             </div>
           </div>
         </section>
