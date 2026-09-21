@@ -46,6 +46,40 @@ const BlackSwan = () => (
     <path className="swan-hatching" d="M410 119l20 9M397 136l21 10M383 154l20 10M370 174l20 9M361 196l18 7M357 221l17 6M360 247l17 5M366 273l18 4M376 299l18 3" />
   </svg>
 );
+
+const NautilusStudy = () => (
+  <svg className="museum-study" viewBox="0 0 360 300" role="img" aria-labelledby="nautilus-title nautilus-description">
+    <title id="nautilus-title">An engraved nautilus study</title>
+    <desc id="nautilus-description">A fine-line anatomical study of a nautilus shell, representing iteration and compounding.</desc>
+    <path className="study-corner" d="M18 54V18h36M24 43V24h19M342 54V18h-36M336 43V24h-19M18 246v36h36M24 257v19h19M342 246v36h-36M336 257v19h-19" />
+    <path className="study-ground" d="M54 250c72-12 160-11 252 1M79 261c61-7 129-6 205 1" />
+    <path className="study-primary" d="M68 215C37 164 61 91 125 52c71-44 160-22 185 43 27 71-26 144-100 157-66 12-130-19-143-72-11-45 16-88 59-99 40-10 78 13 83 47 5 31-18 58-47 59-23 1-41-16-39-37 1-16 14-28 29-27 12 0 21 10 20 21" />
+    <path className="study-secondary" d="M152 144c-8 7-10 19-4 27 7 10 22 11 33 2 16-13 18-39 5-57-18-25-55-31-84-12-37 24-45 75-19 112 34 49 105 58 160 23 65-41 82-126 39-184" />
+    <path className="study-rib" d="M171 144L125 52M171 144L94 69M171 144L69 102M171 144L55 142M171 144L58 184M171 144L77 222M171 144L111 247M171 144L157 258M171 144L206 253M171 144L250 233M171 144L288 197M171 144L313 151M171 144L310 101M171 144L282 55" />
+    <path className="study-hatch" d="M84 110l-13-5M77 126l-14-3M73 161l-15 2M79 195l-14 5M97 220l-12 9M125 239l-8 12M221 239l7 11M254 222l11 8M279 198l14 4M295 168l14 1M299 132l13-2M289 96l12-6M268 70l9-10M238 53l5-12M202 44l2-13M161 45l-2-13" />
+    <circle className="study-dot" cx="171" cy="144" r="3.2" />
+  </svg>
+);
+
+const ArmillaryStudy = () => (
+  <svg className="museum-study" viewBox="0 0 360 330" role="img" aria-labelledby="armillary-title armillary-description">
+    <title id="armillary-title">An engraved armillary sphere</title>
+    <desc id="armillary-description">A fine-line armillary sphere on a classical pedestal, representing multidisciplinary study.</desc>
+    <path className="study-corner" d="M18 54V18h36M24 43V24h19M342 54V18h-36M336 43V24h-19M18 276v36h36M24 287v19h19M342 276v36h-36M336 287v19h-19" />
+    <circle className="study-primary" cx="180" cy="135" r="91" />
+    <ellipse className="study-secondary" cx="180" cy="135" rx="91" ry="34" />
+    <ellipse className="study-secondary" cx="180" cy="135" rx="34" ry="91" />
+    <ellipse className="study-secondary" cx="180" cy="135" rx="89" ry="39" transform="rotate(-31 180 135)" />
+    <ellipse className="study-secondary" cx="180" cy="135" rx="89" ry="39" transform="rotate(31 180 135)" />
+    <path className="study-primary" d="M111 204l138-138M180 31v208M84 135h192" />
+    <circle className="study-orbit" cx="180" cy="135" r="13" />
+    <circle className="study-dot" cx="180" cy="135" r="4" />
+    <circle className="study-dot" cx="244" cy="92" r="3" />
+    <path className="study-primary" d="M160 226h40l9 29h-58l9-29zM145 255h70v12h-70zM132 267h96l13 25H119l13-25zM105 292h150" />
+    <path className="study-hatch" d="M128 84l-11-9M145 66l-8-12M165 56l-4-14M197 56l4-14M218 66l8-12M236 82l11-9M119 184l-12 7M141 207l-8 12M219 207l8 12M241 184l12 7M138 275h84M132 283h96" />
+    <path className="study-ground" d="M91 305c59-7 119-7 178 0M119 315c42-4 84-4 126 0" />
+  </svg>
+);
 const links = [
   ['LinkedIn', 'https://www.linkedin.com/in/adriennav/'],
   ['GitHub', 'https://github.com/Crypto-Advisor'],
@@ -137,6 +171,7 @@ function App() {
             <p>That also affects the kinds of problems we choose to work on. We will often test questions that look extremely difficult, or maybe even impossible, because the way we approach those problems is part of what gives us an advantage. The willingness to enter areas others dismiss, learn from them quickly, and keep going compounds over time.</p>
             <a className="text-link" href="https://www.thestockthoughts.com/p/a-conversation-with-adrien-navarre" target="_blank" rel="noopener noreferrer">Read the full conversation <Arrow /></a>
           </div>
+          <div className="story-art"><NautilusStudy /></div>
         </section>
 
         <section className="principle-section wrap" aria-labelledby="principle-title">
@@ -160,6 +195,7 @@ function App() {
             </ul>
             <p className="education-fields"><span>Fields of study</span>Electrical Engineering &amp; Computer Science</p>
           </div>
+          <div className="education-art"><ArmillaryStudy /></div>
         </section>
 
         <section className="practice-section wrap" aria-labelledby="practice-title">

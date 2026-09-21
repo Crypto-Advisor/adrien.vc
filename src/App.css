@@ -45,9 +45,10 @@ h1 > span { color: #797d73; font-family: 'Cormorant Garamond', Georgia, serif; f
 .background-intro h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 39px; font-weight: 500; letter-spacing: -.04em; line-height: 1.12; margin-top: 28px; }
 .background-intro h2 span { color: #797d73; }
 .background-intro > p:last-child { color: var(--muted); font-size: 16px; line-height: 1.8; margin-top: 24px; max-width: 370px; }
-.story-section { display: grid; grid-template-columns: 1fr 1.1fr; gap: 96px; border-top: 1px solid var(--line); padding-block: 38px 96px; position: relative; }
-.story-section h2 { max-width: 300px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 38px; line-height: 1.08; letter-spacing: -.035em; font-weight: 500; }
+.story-section { display: grid; grid-template-columns: 1fr 1.1fr; grid-template-rows: auto 1fr; gap: 0 96px; border-top: 1px solid var(--line); padding-block: 38px 96px; position: relative; }
+.story-section h2 { grid-column: 1; grid-row: 1; max-width: 300px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 38px; line-height: 1.08; letter-spacing: -.035em; font-weight: 500; }
 .story-copy { max-width: 620px; }
+.story-section .story-copy { grid-column: 2; grid-row: 1 / span 2; }
 .story-copy p { color: var(--muted); font-size: 16px; line-height: 1.8; }
 .story-copy .story-lede { color: var(--ink); }
 .story-copy p + p { margin-top: 20px; }
@@ -78,6 +79,19 @@ h1 > span { color: #797d73; font-family: 'Cormorant Garamond', Georgia, serif; f
 .principle-copy > p:not(.section-label):not(.book-credit) { margin-top: 24px; max-width: 470px; color: var(--muted); font-size: 16px; line-height: 1.8; }
 .principle-copy cite { color: var(--ink); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2em; font-weight: 600; }
 .book-credit { margin-top: 30px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--antique); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-style: italic; letter-spacing: .03em; }
+.story-art, .education-art { width: min(300px, 100%); padding: 11px; background: rgba(244, 241, 232, .58); border: 1px solid rgba(139, 121, 91, .34); box-shadow: inset 0 0 0 5px rgba(139, 121, 91, .07); }
+.story-art { grid-column: 1; grid-row: 2; align-self: start; margin-top: 46px; }
+.education-art { grid-column: 1; grid-row: 2; align-self: end; margin-top: 34px; }
+.museum-study { display: block; width: 100%; height: auto; }
+.study-primary, .study-secondary, .study-rib, .study-hatch, .study-ground, .study-corner { fill: none; stroke: #625c4e; stroke-linecap: round; stroke-linejoin: round; }
+.study-primary { stroke-width: 1.65; }
+.study-secondary { stroke: #8b795b; stroke-width: 1.05; }
+.study-rib { stroke: #9a8c73; stroke-width: .8; opacity: .78; }
+.study-hatch { stroke: #8b795b; stroke-width: .85; opacity: .65; }
+.study-ground { stroke: #7e947f; stroke-width: 1.2; opacity: .62; }
+.study-corner { stroke: var(--antique); stroke-width: 1.15; opacity: .78; }
+.study-dot { fill: #315b45; stroke: #1c3428; stroke-width: .7; }
+.study-orbit { fill: rgba(49, 91, 69, .08); stroke: #315b45; stroke-width: 1.2; }
 .experience { display: flex; align-items: center; gap: 24px; padding: 27px 0; border-top: 1px solid var(--line); }
 .experience:last-child { border-bottom: 1px solid var(--line); }
 .experience-logo { display: grid; place-items: center; width: 124px; height: 40px; flex: 0 0 124px; }
@@ -108,7 +122,7 @@ h1 > span { color: #797d73; font-family: 'Cormorant Garamond', Georgia, serif; f
 .site-footer { display: flex; justify-content: space-between; align-items: center; gap: 24px; border-top: 1px solid var(--line); padding-block: 30px; color: var(--muted); font-size: 12px; }
 .site-footer > div { display: flex; gap: 25px; }
 .site-footer a { padding-block: 8px; }
-@media (max-width: 1000px) { .wrap { width: calc(100% - 64px); } .work-story { padding: 32px; gap: 20px; } .work-proof { padding: 34px; } .background-section, .story-section { gap: 48px; } .experience { gap: 16px; } .practice-grid { gap: 30px; } }
+@media (max-width: 1000px) { .wrap { width: calc(100% - 64px); } .work-story { padding: 32px; gap: 20px; } .work-proof { padding: 34px; } .background-section { gap: 48px; } .story-section { column-gap: 48px; } .experience { gap: 16px; } .practice-grid { gap: 30px; } }
 @media (max-width: 720px) { .wrap { width: calc(100% - 40px); } .site-header { min-height: 90px; gap: 20px; flex-wrap: wrap; padding-block: 22px; } .site-header nav { gap: 24px; width: 100%; justify-content: space-between; } .site-header nav a:last-child { margin-left: 0; } .hero { padding-top: 54px; } h1 { font-size: clamp(40px, 8.5vw, 60px); margin-top: 26px; } .hero-bottom { flex-direction: column; align-items: flex-start; margin-top: 28px; gap: 22px; } .hero-bottom p { font-size: 17px; } .desktop-break { display: none; } .work-section > .section-label span:last-child { display: none; } .featured-work { grid-template-columns: 1fr; } .work-story { padding: 30px 24px; } .company-mark { display: none; } .work-story h2 { font-size: 32px; } .work-proof { padding: 30px 24px; } .background-section, .story-section { grid-template-columns: 1fr; gap: 38px; } .background-section { padding-block: 64px; } .story-section { padding-bottom: 64px; } .story-section h2 { font-size: 34px; } .background-intro h2 { font-size: 34px; } .experience { gap: 16px; } .experience-status { font-size: 12px; } .experience h3 { font-size: 18px; } .practice-grid { grid-template-columns: 1fr; gap: 32px; margin-top: 32px; } .practice-grid article { border-bottom: 1px solid var(--line); padding-bottom: 30px; } .practice-grid article:last-child { border: 0; padding-bottom: 0; } .practice-grid h3 { margin-top: 14px; } .practice-grid p { max-width: none; } .stack { margin-top: 18px; } .contact-section { margin-top: 60px; padding-bottom: 55px; } .contact-heading h2 { font-size: clamp(42px, 14vw, 56px); } .contact-arrow { width: 56px; height: 56px; font-size: 28px; } .contact-heading { gap: 16px; } .email-link { font-size: 16px; } .site-footer { align-items: flex-start; flex-wrap: wrap; gap: 12px 24px; } .site-footer > span { width: 100%; } .site-footer > div { gap: 20px; } }
 
 .research-statement { font-family: "Manrope", sans-serif; font-size: clamp(28px, 3vw, 40px); font-weight: 450; line-height: 1.35; letter-spacing: -.04em; max-width: 390px; margin-bottom: 40px; }
@@ -159,6 +173,11 @@ h1 { margin-top: 0; font-size: clamp(40px, 5.9vw, 82px); }
   .principle-art { order: 2; padding: 10px; }
   .principle-copy { order: 1; }
   .principle-copy h2 { font-size: clamp(42px, 15vw, 58px); }
+  .story-section h2, .story-section .story-copy, .story-art, .education-section > h2, .education-content, .education-art { grid-column: 1; }
+  .story-section h2, .education-section > h2 { grid-row: 1; }
+  .story-art, .education-content { grid-row: 2; }
+  .story-section .story-copy, .education-art { grid-row: 3; }
+  .story-art, .education-art { width: 100%; margin-top: 6px; }
 }
 @media (min-width: 350px) and (max-width: 720px) {
   .site-header { min-height: 80px; flex-wrap: nowrap; padding-block: 16px; gap: 14px; }
@@ -193,7 +212,9 @@ html { scroll-padding-top: 136px; }
 .ranking-number { font-family: 'Manrope', sans-serif; font-size: 62px; line-height: 1; letter-spacing: -.06em; }
 .ranking p { font-size: 16px; line-height: 1.6; color: #e0e7df; }
 .organic-note { font-size: 14px; line-height: 1.6; color: #c2cfc5; padding: 0 0 28px; }
-.education-section { display: grid; grid-template-columns: 1fr 1.1fr; gap: 96px; border-top: 1px solid var(--line); padding-block: 38px 64px; position: relative; }
+.education-section { display: grid; grid-template-columns: 1fr 1.1fr; grid-template-rows: auto 1fr; gap: 0 96px; border-top: 1px solid var(--line); padding-block: 38px 64px; position: relative; }
+.education-section > h2 { grid-column: 1; grid-row: 1; }
+.education-content { grid-column: 2; grid-row: 1 / span 2; }
 .education-schools { list-style: none; margin: 0; padding: 0; }
 .education-schools li { display: grid; grid-template-columns: 46px minmax(0, 1fr); align-items: center; gap: 17px; min-height: 66px; border-bottom: 1px solid var(--line); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; font-weight: 500; line-height: 1.15; letter-spacing: -.025em; }
 .education-schools li:first-child { border-top: 1px solid var(--line); }
@@ -204,8 +225,8 @@ html { scroll-padding-top: 136px; }
 .school-mark-smu { color: #8a2f32; font-size: 9px; letter-spacing: -.07em; }
 .education-fields { font-size: 16px; line-height: 1.7; color: var(--muted); margin-top: 26px; }
 .education-fields span { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 8px; }
-@media (max-width: 1000px) { .ranking { grid-template-columns: 64px minmax(0, 1fr); gap: 16px; } .ranking-number { font-size: 48px; } .education-section { gap: 36px; grid-template-columns: 1fr 1fr; } }
-@media (max-width: 720px) { .education-section { grid-template-columns: 1fr; gap: 26px; padding-bottom: 48px; } }
+@media (max-width: 1000px) { .ranking { grid-template-columns: 64px minmax(0, 1fr); gap: 16px; } .ranking-number { font-size: 48px; } .education-section { column-gap: 36px; grid-template-columns: 1fr 1fr; } }
+@media (max-width: 720px) { .education-section { grid-template-columns: 1fr; grid-template-rows: auto auto auto; gap: 26px; padding-bottom: 48px; } }
 
 .profile-location { margin-top: 24px; }
 .profile-location > span { font-size: 12px; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); }
