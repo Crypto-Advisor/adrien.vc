@@ -42,7 +42,7 @@ function App() {
               <span className="portrait-seal"><Monogram /></span>
             </div>
             <div className="hero-bottom">
-              <p>Founder building TickerTrends to challenge the alternative-data establishment<br className="desktop-break" /> through better technology and relentless execution.</p>
+              <p>Building TickerTrends to take market share from legacy alternative-data providers<br className="desktop-break" /> through a better product and relentless execution.</p>
               <a className="text-link" href="#work">Explore my work <span aria-hidden="true">↓</span></a>
             </div>
           </div>
@@ -57,8 +57,8 @@ function App() {
               <div>
                 <p className="eyebrow">CEO & Founder</p>
                 <h2 id="work-title">TickerTrends</h2>
-                <p className="work-description">Alternative data.<br />Built to challenge the incumbents.</p>
-                <p className="supporting-copy">Alternative data helps reveal what people and businesses may buy by analyzing how they interact with their devices. TickerTrends competes directly with established providers by moving faster, covering more, and delivering clearer answers.</p>
+                <p className="work-description">Alternative data.<br />Built to replace the status quo.</p>
+                <p className="supporting-copy">Alternative data helps anticipate what people and businesses will buy by analyzing how they interact with their devices. TickerTrends is built to displace legacy providers: faster to adapt, broader in coverage, and clearer at the point of decision.</p>
                 <a className="text-link" href="https://tickertrends.io" target="_blank" rel="noopener noreferrer">Visit TickerTrends <Arrow /></a>
               </div>
             </div>
@@ -74,7 +74,7 @@ function App() {
           <div className="background-intro">
             <p className="section-label">02 / Background</p>
             <h2 id="background-title">A background in finance.<br /><span>A foundation in engineering.</span></h2>
-            <p>My work spans quantitative finance, full-stack development, and robotics automation. I am fiercely competitive: I study where incumbents are vulnerable, then use better technology, faster iteration, and disciplined execution to outperform them.</p>
+            <p>My work spans quantitative finance, full-stack development, and robotics automation. I am intensely competitive: I study where incumbents are slow, expensive, or complacent, then build systems designed to take their customers.</p>
             <div className="profile-location"><span>Location</span><p>Dallas, Texas &amp; Malibu, California</p></div>
           </div>
           <div className="experience-list">
@@ -101,7 +101,7 @@ function App() {
           <div className="story-copy">
             <p className="story-lede">I first became interested in markets as a teenager, when I started a YouTube channel about quantitative finance. The audience grew, but more importantly, it taught me to follow questions wherever they led.</p>
             <p>At university, I studied computer science while working in robotics and machine learning. Most evenings, I drove to my office and built TickerTrends late into the night. Sharing the work publicly brought thoughtful feedback and unexpected connections.</p>
-            <p>Going full-time was only the beginning. We spent the next year and a half iterating with users, listening closely, and refining the product until we found a problem we could solve at scale. TickerTrends continues to evolve through that same cycle, with a clear objective: outwork incumbents and reset the standard for our industry.</p>
+            <p>Going full-time was only the beginning. We spent the next year and a half iterating with users, listening closely, and refining the product until we found a problem we could solve at scale. The objective now is unambiguous: out-execute every incumbent and become the company the market measures them against.</p>
             <a className="text-link" href="https://www.thestockthoughts.com/p/a-conversation-with-adrien-navarre" target="_blank" rel="noopener noreferrer">Read the full conversation <Arrow /></a>
           </div>
         </section>
