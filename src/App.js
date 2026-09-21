@@ -42,11 +42,10 @@ function App() {
               <span className="portrait-seal"><Monogram /></span>
             </div>
             <div className="hero-bottom">
-              <p>Building TickerTrends to take market share from legacy alternative-data providers<br className="desktop-break" /> through a better product and relentless execution.</p>
+              <p>Technical founder working across financial markets, software, and robotics.</p>
               <a className="text-link" href="#work">Explore my work <span aria-hidden="true">↓</span></a>
             </div>
           </div>
-          <div className="hero-caption"><span>Currently building TickerTrends</span><span>Finance / Software / Robotics</span></div>
         </section>
 
         <section className="work-section wrap" id="work" aria-labelledby="work-title">
@@ -57,14 +56,14 @@ function App() {
               <div>
                 <p className="eyebrow">CEO & Founder</p>
                 <h2 id="work-title">TickerTrends</h2>
-                <p className="work-description">Alternative data.<br />Built to replace the status quo.</p>
-                <p className="supporting-copy">Alternative data helps anticipate what people and businesses will buy by analyzing how they interact with their devices. TickerTrends is built to displace legacy providers: faster to adapt, broader in coverage, and clearer at the point of decision.</p>
+                <p className="work-description">A clearer view of demand.<br />Before it becomes obvious.</p>
+                <p className="supporting-copy">Alternative data helps anticipate what people and businesses will buy by analyzing how they interact with their devices. TickerTrends turns those patterns into decision-ready intelligence, with speed and coverage legacy providers cannot match.</p>
                 <a className="text-link" href="https://tickertrends.io" target="_blank" rel="noopener noreferrer">Visit TickerTrends <Arrow /></a>
               </div>
             </div>
             <div className="work-proof">
-              <div className="ranking"><span className="ranking-number">#2</span><p>Highest-traffic financial alternative data business</p></div>
-              <div className="ranking"><span className="ranking-number">#1</span><p>Most followed on social media in financial alternative data</p></div>
+              <div className="ranking"><span className="ranking-number">#2</span><p>Highest-traffic company in the category</p></div>
+              <div className="ranking"><span className="ranking-number">#1</span><p>Largest social following in the category</p></div>
               <p className="organic-note">All grown through organic content.</p>
             </div>
           </div>
@@ -74,7 +73,7 @@ function App() {
           <div className="background-intro">
             <p className="section-label">02 / Background</p>
             <h2 id="background-title">A background in finance.<br /><span>A foundation in engineering.</span></h2>
-            <p>The advantage is the combination of disciplines: technical depth to build the systems, market knowledge to identify what matters, and managerial execution to turn both into a durable business. We run TickerTrends as a technology company serving finance, with software-level iteration, measurement, and operating discipline. That integrated approach lets us solve problems and compound learning in ways competitors built around a traditional data-provider model are not structured to match.</p>
+            <p>The advantage is the combination of disciplines: technical depth to build the systems, market knowledge to identify what matters, and managerial execution to turn both into a durable business. We run TickerTrends as a technology company serving finance, bringing engineering, market judgment, and management into one operating system instead of treating them as separate functions.</p>
             <div className="profile-location"><span>Location</span><p>Dallas, Texas &amp; Malibu, California</p></div>
           </div>
           <div className="experience-list">
@@ -100,10 +99,10 @@ function App() {
           <h2 id="story-title">How I build companies</h2>
           <div className="story-copy">
             <p className="story-lede">When I was maybe 14 or 15, I started a YouTube channel about quantitative finance and automated trading strategies. I had pretty limited knowledge at the time, but almost no one was talking about those topics publicly. The channel grew to tens of thousands of subscribers, and it created a snowball effect where I kept going deeper into financial markets.</p>
-            <p>Later, while I was studying computer science, I was also working full-time as a software engineer in robotics and machine learning. I would take classes in the morning, work at the robotics company, and then drive to my TickerTrends office around 6 or 7 p.m. and work until midnight or 1 a.m. It was a very extreme setup, but it was also clear to me that TickerTrends was the thing I wanted to build.</p>
+            <p>Later, while I was studying computer science, I was also working full-time as a software engineer in robotics and machine learning. I would take classes in the morning, work at the robotics company, and then drive to my TickerTrends office around 6 or 7 p.m. and work until midnight or 1 a.m. It was a very extreme setup, but it was also clear to me that this was the company I wanted to build.</p>
             <p>Once I went full-time, it still took us about a year and a half to find the part of the business that could really scale. That period was mostly feedback and iteration. As more people used the software, we got better information about what they wanted, which ideas were working, and where we should direct our effort. We still operate that way today. The goal is to keep those cycles as fast as possible so that every improvement gives us information for the next one.</p>
             <p><cite>Antifragile</cite> is probably my favorite book. The ideas around Black Swans and building systems that benefit from volatility have had a large influence on how I think about companies. I try to avoid decisions where one unexpected event can permanently damage the business, while keeping enough flexibility that new information or a change in the market can become an opportunity for us.</p>
-            <p>That also affects the kinds of problems we choose to work on. We will often test questions that look extremely difficult, or maybe even impossible, because the way we approach those problems is part of what gives us an advantage. A lot of the industry still operates like a traditional data business. We operate much more like a technology company, and the mixture of software engineering, knowledge of financial markets, and management is what allows us to improve faster and build infrastructure that would be very difficult for competitors to replicate. Over time, I think that difference compounds.</p>
+            <p>That also affects the kinds of problems we choose to work on. We will often test questions that look extremely difficult, or maybe even impossible, because the way we approach those problems is part of what gives us an advantage. The willingness to enter areas others dismiss, learn from them quickly, and keep going compounds over time.</p>
             <a className="text-link" href="https://www.thestockthoughts.com/p/a-conversation-with-adrien-navarre" target="_blank" rel="noopener noreferrer">Read the full conversation <Arrow /></a>
           </div>
         </section>
@@ -123,7 +122,7 @@ function App() {
         <section className="practice-section wrap" aria-labelledby="practice-title">
           <div className="section-label"><h2 id="practice-title">03 / Technical practice</h2></div>
           <div className="practice-grid">
-            <article><span className="practice-index">I.</span><h3>Markets & data</h3><p>Quantitative finance and alternative data. At 14–15, I started a YouTube channel about quantitative finance that grew to 20,000 followers.</p><span className="stack">Python / PostgreSQL / MongoDB</span></article>
+            <article><span className="practice-index">I.</span><h3>Markets & data</h3><p>Quantitative finance, alternative data, and the market context needed to separate useful signals from noise.</p><span className="stack">Python / PostgreSQL / MongoDB</span></article>
             <article><span className="practice-index">II.</span><h3>Software</h3><p>Full-stack development, including machine learning, from the interface to the infrastructure behind it.</p><span className="stack">TypeScript / React / Node.js / Docker</span></article>
             <article><span className="practice-index">III.</span><h3>Robotics & systems</h3><p>Engineering and automation where software meets the physical world.</p><span className="stack">C / C++ / Rust / Python</span></article>
           </div>
